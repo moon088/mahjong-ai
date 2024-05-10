@@ -1,6 +1,7 @@
 # mahjong-ai
 作成した麻雀AIのリポジトリ
-#メモ
+
+#　メモ
 ・calculate_continuous_feature.py理解して解決
 
 ## 使用したデータセット
