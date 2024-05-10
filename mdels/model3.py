@@ -10,12 +10,12 @@ from imblearn.over_sampling import RandomOverSampler
 
 filepath1 = ''#FIXME: path
 filepath2 = ''#FIXME: path
-#! path入れて
+
 
 
 mj_data = pickle.load(filepath1)#特徴量ベクトル
 mj_target = pickle.load(filepath2)#ラベルベクトル
-#別にpickleでなくてもいい
+
 train_data, validation_data, train_label, validation_label = train_test_split(
     mj_data,
     mj_target,
@@ -49,7 +49,7 @@ model.compile(
     loss = 'binary_crossentropy',
     metrics = [
         'accuracy',
-        #普通の精度評価 あまり当てにならない
+        #普通の精度評価 
         keras.metrics.F1Score(average='weighted', threshold=0.5),#TODO: args
         #F1値による評価
         keras.metrics.AUC(curve='PR')#TODO: args
@@ -74,4 +74,3 @@ history = model.fit(
 #https://qiita.com/F8LUUI5kOxLvrmuIAIPwFsUWSKNdgW5N/items/99af44e253201b5b2dc2
 #https://ohke.hateblo.jp/entry/2017/08/18/230000
 
-#SMOTEはもっと調べないと使えない

@@ -6,14 +6,14 @@ from sklearn.model_selection import train_test_split
 
 filepath1 = ''#FIXME: path
 filepath2 = ''#FIXME: path
-#! path入れて
+
 
 f1 = open(filepath1, 'rb')
 f2 = open(filepath2, 'rb')
 
 mj_data = pickle.load(f1)#特徴量ベクトル
 mj_target = pickle.load(f2)#ラベルベクトル
-#別にpickleでなくてもいい
+
 train_data, validation_data, train_label, validation_label = train_test_split(
     mj_data,
     mj_target,
@@ -34,12 +34,12 @@ model.compile(
     loss = 'binary_crossentropy',
     metrics = [
         'accuracy',
-        #普通の精度評価 あまり当てにならない
+        #普通の精度評価 
         keras.metrics.F1Score(average='weighted', threshold=0.5),#TODO: args
         #F1値による評価
         keras.metrics.AUC(curve='PR'),#TODO: args
         #PR-AUCによる評価
-        #閾値の設定に謎がある
+        #閾値の設定
         keras.metrics.Precision(),
         keras.metrics.Recall()
     ]
@@ -59,10 +59,3 @@ history = model.fit(
     #aucならmode=max
 )
 
-
-#おおよそはこんな感じ
-#各種設定値はあまり自信ない 初めて使ってるものが結構あるので
-#metricsと,EarlyStoppingの引数あたりが特にあやしい
-#keras.datasets.imdbで動作を見たところ、動きはする
-#*不均衡データ使ってテストしたい credit card fraud detectionとか
-#*やっぱりEarlyStoppingにはPR-AUCをmonitorしてもらった方がいいかも

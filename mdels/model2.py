@@ -8,12 +8,12 @@ from sklearn.model_selection import train_test_split
 
 filepath1 = ''#FIXME: path
 filepath2 = ''#FIXME: path
-#! path入れて
+
 
 
 mj_data = pickle.load(filepath1)#特徴量ベクトル
 mj_target = pickle.load(filepath2)#ラベルベクトル
-#別にpickleでなくてもいい
+
 train_data, validation_data, train_label, validation_label = train_test_split(
     mj_data,
     mj_target,
@@ -51,7 +51,7 @@ model.compile(
     loss = 'binary_crossentropy',
     metrics = [
         'accuracy',
-        #普通の精度評価 あまり当てにならない
+        #普通の精度評価 
         keras.metrics.F1Score(average='weighted', threshold=0.5),#TODO: args
         #F1値による評価
         keras.metrics.AUC(curve='PR')#TODO: args
@@ -75,5 +75,5 @@ history = model.fit(
     #EarlyStoppingはval_auc_1=PR-AUCをmonitor
 )
 
-#基本方針は↓のような感じ
+#基本方針↓
 #https://qiita.com/dcm_yukimasa-kaneda/items/5eaadbdeec10d92020c6

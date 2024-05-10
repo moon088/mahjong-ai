@@ -1,5 +1,5 @@
 #モデルの詳細なコード
-#実行はできないよ
+#実行はできない
 import sys
 import numpy as np
 import tensorflow as tf
@@ -8,11 +8,11 @@ import pickle
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 
-sys.path.append('/content/drive/MyDrive/実験2/prj-14')
+sys.path.append('')
 
-filepath1 = '/content/drive/MyDrive/実験2/prj-14/mj_files/data200.pkl'#FIXME: path
-filepath2 = '/content/drive/MyDrive/実験2/prj-14/mj_files/label200.pkl'#FIXME: path
-#! path入れて
+filepath1 = ''#FIXME: path
+filepath2 = ''#FIXME: path
+
 
 f1 = open(filepath1, 'rb')
 f2 = open(filepath2, 'rb')
