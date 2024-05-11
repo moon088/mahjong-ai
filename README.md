@@ -19,4 +19,4 @@
 3. [期待最終順位に基づくコンピュータ麻雀プレイヤの構築](https://ipsj.ixsq.nii.ac.jp/ej/index.php?action=pages_view_main&active_action=repository_action_common_download&item_id=145804&item_no=1&attribute_id=1&file_no=1&page_id=13&block_id=8)
 4. [自動対戦棋譜の教師あり学習による翻数予測に基づく
 麻雀プレイヤ](https://ipsj.ixsq.nii.ac.jp/ej/?action=repository_action_common_download&item_id=198354&item_no=1&attribute_id=1&file_no=1)
-
+5. [天鳳の牌譜形式を解析する(1)](https://blog.kobalab.net/entry/20170225/1488036549)
