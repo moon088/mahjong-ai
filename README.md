@@ -7,7 +7,7 @@
 
 
 ## 使用したデータセット
-今回は麻雀のオンラインゲームである天鳳が公開している牌譜データを使用した。
+麻雀のオンラインゲームである天鳳が公開している牌譜データを使用した。
 
 [天鳳鳳凰卓東南戦](https://drive.google.com/drive/folders/19lXnBEPuaro3gyBvqWWz2ZGg8h0USHjJ)
 
